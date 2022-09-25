@@ -1,0 +1,111 @@
+:root {
+  --bodyHeightScale: 1;
+}
+
+@keyframes TemporaryShow {
+  0%, 100% {
+    visibility: visible;
+  }
+}
+@keyframes TemporaryHide {
+  0%, 100% {
+    visibility: hidden;
+  }
+}
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+html body {
+  -webkit-user-select: none;
+  font-family: var(--font);
+  font-size: calc(var(--viewportHeightRatio) * (36px / 21.6) * var(--currentPageHeight) / 100 );
+  color: white;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#highlight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+#Electricity {
+  width: 100%;
+  height: 100%;
+}
+#Electricity[state=off] {
+  display: none;
+}
+@font-face {
+  font-family: "Digital";
+  src: url("/Pages/VCockpit/Instruments/Shared/Fonts/digital.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alarm-Clock";
+  src: url("/Pages/VCockpit/Instruments/Shared/Fonts/Quartz.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("/Fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+kn62a-element {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Alarm-Clock;
+  color: rgb(247, 113, 30);
+}
+kn62a-element #Mainframe {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+kn62a-element #Mainframe .value {
+  text-align: right;
+  font-size: 75vh;
+  color: rgb(247, 113, 30);
+}
+kn62a-element #Mainframe .label {
+  font-family: Roboto-Medium;
+  text-align: left;
+  font-size: 20vh;
+  position: absolute;
+  bottom: -12vh;
+  left: 25%;
+}
+
+kn62a-element #Mainframe #RMTLabel {
+  left: 50%;
+}
+
+kn62a-element #Mainframe #DisplaySection  {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+kn62a-element #Mainframe #DisplaySection > div {
+  padding-right: 2%;
+  min-width: 20%;
+  height: 100%;
+  position: relative;
+}
+kn62a-element #Mainframe #DisplaySection #Freq {
+  min-width: 33%;
+  padding-right: 0;
+}
+
+/*# sourceMappingURL=KN62A.css.map */
