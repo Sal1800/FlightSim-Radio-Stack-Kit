@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ModelInfo>
+	<LODS>
+		<!-- Highest LOD -->
+		<!-- minimum display size in % (should be bounding sphere vertical screen size, sphere will often be slightly larger than you expect) -->
+		<!-- default minSize is 0 -->
+		<LOD minSize="0" ModelFile="Radio-Stack.gltf"/>
+	</LODS>
+
+	<Behaviors>
+
+		<Include ModelBehaviorFile="Asobo\Common.xml"/>
+		<Include ModelBehaviorFile="Asobo\Generic.xml"/>
+		<Include ModelBehaviorFile="Asobo\NAVCOM\NavComSystem.xml"/>	
+	    <Include ModelBehaviorFile="Asobo\Transponder\Transponder.xml"/>
+	    <Include ModelBehaviorFile="Asobo\NAVCOM\ADF.xml"/>	
+		<Include ModelBehaviorFile="Asobo\GPS\AS530.xml"/>	
+
+
+		<Component ID="AVIONICS">
+
+			<!-- Comnav 1 Radio -->
+			<UseTemplate Name="ASOBO_NAVCOM_Simple_Radio_Template">
+	        	<ID>1</ID>
+	      	</UseTemplate>
+
+
+	      	<!-- Comnav 2 Radio -->
+			<UseTemplate Name="ASOBO_NAVCOM_Simple_Radio_Template">
+	        	<ID>2</ID>
+	      	</UseTemplate>
+  	
+
+	      	<!-- KR 87 ADF receiver -->
+		    <UseTemplate Name="ASOBO_INSTRUMENT_ADF_Template">
+		      	<DIMMING_FACTOR>1</DIMMING_FACTOR>
+		    </UseTemplate>	      
+
+
+			<!-- KT 76 Transponder -->
+		    <UseTemplate Name="ASOBO_Transponder_AS76C_Template">
+		        <ID>1</ID>
+		    </UseTemplate>
+
+	    	<!-- KN 62A DME -->
+	    	<Component ID="DME">
+				<Component ID="DME_MODE" Node="DME_Switch_MODE_Clk_1">
+		 			<UseTemplate Name="ASOBO_GT_Interaction_LeftSingle_Code">
+		 				<!-- toggle between 3 values -->
+						<LEFT_SINGLE_CODE>(L:DME_MODE, Number) 1 + 3 % (&gt;L:DME_MODE)</LEFT_SINGLE_CODE>
+						<EVENTID/>
+					</UseTemplate>
+					<UseTemplate Name="ASOBO_GT_Anim">
+						<ANIM_NAME>DME_Switch_MODE</ANIM_NAME>
+						<ANIM_CODE>(L:DME_MODE, Number) 50 *</ANIM_CODE>
+						<ANIM_LENGTH>100</ANIM_LENGTH>
+					</UseTemplate>	
+					<UseTemplate Name = "ASOBO_GT_AnimTriggers_SoundEvent">
+						<ANIM_NAME>DME_Switch_MODE</ANIM_NAME>
+						<WWISE_EVENT>button_switch_generic</WWISE_EVENT>
+					</UseTemplate>
+				</Component>
+				<Component ID="DME_POWER" Node="DME_Switch_OFF_Clk_1">
+					<Update Once="True" InteractionModel="ALL">
+						1 (&gt;L:DME_CIRCUIT)
+					</Update>
+		 			<UseTemplate Name="ASOBO_GT_Interaction_LeftSingle_Code">
+						<LEFT_SINGLE_CODE>(L:DME_CIRCUIT, bool) ! (&gt;L:DME_CIRCUIT)</LEFT_SINGLE_CODE>
+						<EVENTID/>
+					</UseTemplate>
+					<UseTemplate Name="ASOBO_GT_Anim">
+						<ANIM_NAME>DME_Switch_OFF</ANIM_NAME>
+						<ANIM_CODE>(L:DME_CIRCUIT, bool) 100 *</ANIM_CODE>
+						<ANIM_LENGTH>100</ANIM_LENGTH>
+					</UseTemplate>
+					<UseTemplate Name = "ASOBO_GT_AnimTriggers_SoundEvent">
+						<ANIM_NAME>DME_Switch_OFF</ANIM_NAME>
+						<WWISE_EVENT>button_switch_generic</WWISE_EVENT>
+					</UseTemplate>
+				</Component>
+	    	</Component>
+
+
+		</Component>
+
+		<Component ID="GPS">
+				<!-- AS530 GPS -->
+				<UseTemplate Name="ASOBO_AS530_Template">
+					<AS430>AS530</AS430>
+					<POTENTIOMETER>1</POTENTIOMETER>
+					<FAILURE>(A:CIRCUIT ON:12, Bool)</FAILURE>
+					<CIRCUIT_ID>12</CIRCUIT_ID>
+					<NAV_INDEX>1</NAV_INDEX>
+					<COM_INDEX>1</COM_INDEX>
+					<DIMMING_FACTOR>0.8</DIMMING_FACTOR>
+				</UseTemplate>
+
+				<!-- AS430 GPS -->
+				<UseTemplate Name="ASOBO_AS430_Template">
+					<POTENTIOMETER>1</POTENTIOMETER>
+					<FAILURE>(A:CIRCUIT ON:12, Bool)</FAILURE>
+					<CIRCUIT_ID>12</CIRCUIT_ID>
+					<NAV_INDEX>2</NAV_INDEX>
+					<COM_INDEX>2</COM_INDEX>
+					<DIMMING_FACTOR>0.8</DIMMING_FACTOR>
+				</UseTemplate>				
+
+		</Component>
+
+	  
+	</Behaviors>
+</ModelInfo>
