@@ -11,7 +11,7 @@ class KN62A extends BaseInstrument {
     connectedCallback() {
         super.connectedCallback();
         this.mainframe = this.getChildById("Mainframe");
-        this.display = this.getChildById("DisplaySection");
+        this.electricity = this.getChildById("Electricity");
         this.distElement = this.getChildById("Dist");     
         this.distValue = this.getChildById("DistValue");           
         this.knotsElement = this.getChildById("Knots");
@@ -43,8 +43,7 @@ class KN62A extends BaseInstrument {
             this.navIndex = 2;
         }
 
-        this.display.style.visiblity = (this.on) ? 'visible' : 'hidden';
-
+        this.electricity.setAttribute('state', (this.on) ? 'on' : 'off');
 
         diffAndSetText(this.distValue, this.toStr(this.getDistance(), "---"));
         diffAndSetText(this.knotsValue, this.toStr(this.getKnots(), "--"));  
@@ -75,10 +74,10 @@ class KN62A extends BaseInstrument {
         return SimVar.GetSimVarValue("L:DME_MODE", "number");
     }
     getOnSwitch() {
-        return SimVar.GetSimVarValue("L:DME_CIRCUIT", "bool");
+        return SimVar.GetSimVarValue("L:DME_CIRCUIT", "number");
     }    
     getNavFreq() {
-        return fastToFixed(SimVar.GetSimVarValue("NAV ACTIVE FREQUENCY:" + this.navIndex, "MHz"), 3);
+        return fastToFixed(SimVar.GetSimVarValue("NAV ACTIVE FREQUENCY:" + this.navIndex, "MHz"), 2);
     }
     getDistance() {
         return  fastToFixed(SimVar.GetSimVarValue("NAV DME:" + this.navIndex, "nautical miles"), 1);
@@ -89,7 +88,7 @@ class KN62A extends BaseInstrument {
     getMinutes() {
         var miles = SimVar.GetSimVarValue("NAV DME:" + this.navIndex, "nautical miles");
         var knots = SimVar.GetSimVarValue("NAV DMESPEED:" + this.navIndex, "knots");
-        return  fastToFixed(miles / knots, 0); 
+        return  (knots > 10) ? fastToFixed(miles / knots, 0) : 0; 
     }
 
 }
