@@ -1,0 +1,22 @@
+<AssetPackage Name="sal1800-bendix-stack" Version="0.1.0">
+	<ItemSettings>
+		<ContentType>MISC</ContentType>
+		<Title>Bendix Stack HTML</Title>
+		<Creator>Sal1800</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<AssetGroups>
+		<AssetGroup Name="Bendix_htmlui">
+			<Type>Copy</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\html_ui_Bendix_Stack\</AssetDir>
+			<OutputDir>html_ui\Pages\VCockpit\Instruments\html_ui_Bendix_Stack\</OutputDir>
+		</AssetGroup>	
+	</AssetGroups>
+</AssetPackage>
+
