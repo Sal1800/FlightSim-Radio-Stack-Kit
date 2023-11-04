@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--###########################################-->
+<!--(c)SAL1800                                 -->
+<!--###########################################-->
+
+<ModelBehaviors>
+
+		<Include ModelBehaviorFile="Asobo\Common.xml"/>
+		<Include ModelBehaviorFile="Asobo\Generic.xml"/>	
+
+		<Template Name="Custom_Audio_Panel_Pushbutton_Template">
+
+			<Component ID="AUDIO_PANEL_BENDIX">
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_COM1_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_COM1_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_COM1_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_COM1_0</ALT_ANIM_NAME>
+		    		<TOOLTIPID>COM1</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(A:COM RECEIVE:1, bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE>(&gt;K:COM1_RECEIVE_SELECT)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_COM2_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_COM2_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_COM2_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_COM2_0</ALT_ANIM_NAME>
+		    		<TOOLTIPID>COM2</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(A:COM RECEIVE:2, bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE>(&gt;K:COM2_RECEIVE_SELECT)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_COM3_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_COM3_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_COM3_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_COM3_0</ALT_ANIM_NAME>
+		    		<TOOLTIPID>COM3</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(A:COM RECEIVE:3, bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE>(&gt;K:COM3_RECEIVE_SELECT)</LEFT_SINGLE_CODE>
+				</UseTemplate>
+
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_COM4_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_COM4_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_COM4_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_COM4_0</ALT_ANIM_NAME>
+		    		<TOOLTIPID>COM4</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(A:COM RECEIVE:4, bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE>(&gt;K:COM4_RECEIVE_SELECT)</LEFT_SINGLE_CODE>
+				</UseTemplate>				
+				
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_MKR_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_MKR_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_MKR_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_MKR_0</ALT_ANIM_NAME>		    		
+		    		<TOOLTIPID>Marker</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(L:MARKER_SOUND:1, bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE>(&gt;L:MARKER_SOUND)</LEFT_SINGLE_CODE> 	
+				</UseTemplate>
+			
+
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_NAV1_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_NAV1_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_NAV1_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_NAV1_0</ALT_ANIM_NAME>	
+		    		<TOOLTIPID>NAV1</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(A:NAV SOUND:1, bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE>(&gt;K:RADIO_VOR1_IDENT_SET)</LEFT_SINGLE_CODE> 	
+				</UseTemplate>
+
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_NAV2_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_NAV2_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_NAV2_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_NAV2_0</ALT_ANIM_NAME>	
+		    		<TOOLTIPID>NAV2</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(A:NAV SOUND:2, bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE>(&gt;K:RADIO_VOR2_IDENT_SET)</LEFT_SINGLE_CODE> 	
+				</UseTemplate>
+
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_DME_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_DME_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_DME_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_DME_0</ALT_ANIM_NAME>	
+		    		<TOOLTIPID>DME</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(A:DME SOUND:1, Bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE>(&gt;K:RADIO_DME1_IDENT_SET)</LEFT_SINGLE_CODE> 	
+				</UseTemplate>
+
+				<UseTemplate Name="Custom_Panel_PushButton_Template">
+		    		<NODE_ID>AUDIO_PUSH_ADF_1</NODE_ID>
+		    		<ANIM_NAME>AUDIO_PUSH_ADF_1</ANIM_NAME>
+		    		<ALT_NODE_ID>AUDIO_PUSH_ADF_0</ALT_NODE_ID>
+		    		<ALT_ANIM_NAME>AUDIO_PUSH_ADF_0</ALT_ANIM_NAME>	
+		    		<TOOLTIPID>ADF</TOOLTIPID>
+					<SWITCH_POSITION_CODE>(A:ADF SOUND:1, Bool)</SWITCH_POSITION_CODE>
+					<LEFT_SINGLE_CODE> 20 * (&gt;K:RADIO_ADF_IDENT_SET)</LEFT_SINGLE_CODE> 	
+				</UseTemplate>				
+
+				<!-- AUDIO_Knob_Volume_1 -->
+				<UseTemplate Name="Custom_AudioPanel_Volume_Template">
+					<NODE_ID>AUDIO_Knob_Volume_1</NODE_ID>
+				</UseTemplate>
+
+				<!--  Mic Select -->
+				<UseTemplate Name="Custom_AudioPanel_Mic_Selector_Template">
+					<NODE_ID>AUDIO_PANEL_Knob_Mic_1</NODE_ID>
+				</UseTemplate>
+			</Component>
+		</Template>
+
+		<!-- Two button latched control with each button inverting the other one -->
+		<!--
+	    		<NODE_ID></NODE_ID>
+	    		<ANIM_NAME></ANIM_NAME>
+	    		<ALT_NODE_ID></ALT_NODE_ID>
+	    		<ALT_ANIM_NAME></ALT_ANIM_NAME>
+	    		<TOOLTIPID></TOOLTIPID>
+				<SWITCH_POSITION_CODE></SWITCH_POSITION_CODE>
+				<LEFT_SINGLE_CODE></LEFT_SINGLE_CODE>
+		-->
+
+		<Template Name="Custom_Panel_PushButton_Template">
+	    	<Parameters type="Default">
+	    		<ALT_NODE_ID>#NODE_ID#_0</ALT_NODE_ID>
+	    		<ALT_ANIM_NAME>#NODE_ID#_0</ALT_ANIM_NAME>
+				<ANIM_LENGTH>100</ANIM_LENGTH>
+	    	</Parameters> 
+	    	<!-- update loop to set the simvar -->
+	    	<UseTemplate Name = "ASOBO_GT_Update">
+	    		<FREQUENCY>4</FREQUENCY>
+	    		<UPDATE_CODE>(I:#NODE_ID#_var, bool) (I:#ALT_NODE_ID#_var, bool) or #LEFT_SINGLE_CODE#</UPDATE_CODE>
+	    	</UseTemplate>
+	    	<!-- Primary Button -->
+	    	<Component ID="#NODE_ID#" Node="#NODE_ID#">
+				<UseTemplate Name = "ASOBO_GT_Anim_Code">
+					<ANIM_CODE>#SWITCH_POSITION_CODE# (I:#NODE_ID#_var, bool) or #ANIM_LENGTH# *</ANIM_CODE>
+				</UseTemplate>
+				<UseTemplate Name = "ASOBO_GT_AnimTriggers_2SoundEvents">
+					<WWISE_EVENT_1>button_switch_generic</WWISE_EVENT_1>
+					<WWISE_EVENT_2>button_switch_generic</WWISE_EVENT_2>
+				</UseTemplate>
+				<UseTemplate Name = "ASOBO_GT_Interaction_LeftSingle_Code">
+					<TOOLTIPID>#TOOLTIPID#</TOOLTIPID>
+					<LEFT_SINGLE_CODE>(I:#NODE_ID#_var, bool) ! (&gt;I:#NODE_ID#_var)</LEFT_SINGLE_CODE>
+				</UseTemplate>   		
+	    	</Component>
+	    	<!-- Secondary button -->
+	    	<Component ID="#ALT_NODE_ID#" Node="#ALT_NODE_ID#">
+				<UseTemplate Name = "ASOBO_GT_Anim_Code">
+					<ANIM_NAME>#ALT_ANIM_NAME#</ANIM_NAME>
+					<ANIM_CODE>#ANIM_LENGTH# (I:#ALT_NODE_ID#_var, bool) *</ANIM_CODE>
+				</UseTemplate>
+				<UseTemplate Name = "ASOBO_GT_AnimTriggers_2SoundEvents">
+					<WWISE_EVENT_1>button_switch_generic</WWISE_EVENT_1>
+					<WWISE_EVENT_2>button_switch_generic</WWISE_EVENT_2>
+				</UseTemplate>
+				<UseTemplate Name = "ASOBO_GT_Interaction_LeftSingle_Code">
+					<TOOLTIPID>#TOOLTIPID#</TOOLTIPID>
+					<LEFT_SINGLE_CODE>(I:#ALT_NODE_ID#_var, bool) ! (&gt;I:#ALT_NODE_ID#_var)</LEFT_SINGLE_CODE>
+				</UseTemplate>   		
+	    	</Component>	    	    	  
+	    </Template>
+
+	    <Template Name="Custom_AudioPanel_Volume_Template">
+	    	<!-- combines volume controls of all sources and control from one knob -->
+	    	<Parameters type="Default">
+	    		<ID>1</ID>
+	    		<NODE_ID>AUDIO_Knob_Volume_1</NODE_ID>
+				<ANIM_NAME>#NODE_ID#</ANIM_NAME>
+				<TOOLTIPID>Audio Volume</TOOLTIPID>
+				<RATE>5</RATE>
+	    		<SOURCE_1>COM1</SOURCE_1>
+	    		<SOURCE_2>NAV1</SOURCE_2>
+	    	</Parameters>
+    		<Update Once="True">
+				100 (&gt;L:AUDIO_VOL_#ID#)
+			</Update>
+			<Parameters type="Default">
+	    		<MASTER>(L:AUDIO_VOL_#ID#, Percent)</MASTER>
+	    		<VOL_INC>#MASTER# #RATE# + 100 max</VOL_INC>
+	    		<VOL_DEC>#MASTER# #RATE# - 0 min</VOL_DEC>
+			</Parameters>
+	    	<Parameters type="Default">
+	    		<CW_CODE>#VOL_INC# (&gt;K:#SOURCE_1#_VOLUME_SET)</CW_CODE>
+	    		<CCW_CODE>#VOL_DEC# (&gt;K:#SOURCE_1#_VOLUME_SET)</CCW_CODE>
+	    	</Parameters>
+	    	<Condition NotEmpty="SOURCE_2">
+	    		<True>
+		    		<CW_CODE>#CW_CODE# #VOL_INC# (&gt;K:#SOURCE_2#_VOLUME_SET)</CW_CODE>
+		    		<CCW_CODE>#CCW_CODE# #VOL_DEC# (&gt;K:#SOURCE_2#_VOLUME_SET)</CCW_CODE>
+	    		</True>
+	    	</Condition>
+	    	<Component ID="#NODE_ID#" Node="#NODE_ID#" >
+				<UseTemplate Name="ASOBO_GT_Knob_Finite_Code">
+					<ANIM_CODE>(L:AUDIO_VOL_#ID#, Percent) 0 &gt; 100 *</ANIM_CODE>
+					<ANIM_NAME>#ANIM_NAME#</ANIM_NAME>
+					<CLOCKWISE_CODE>#CW_CODE#</CLOCKWISE_CODE>
+					<ANTICLOCKWISE_CODE>#CCW_CODE#</ANTICLOCKWISE_CODE>
+					<TOOLTIPID>#TOOLTIPID#</TOOLTIPID>
+				</UseTemplate>
+			</Component>
+	    </Template>
+
+	    <Template Name="Custom_AudioPanel_Mic_Selector_Template">
+	    	<!-- combines volume controls of all sources and control from one knob -->
+	    	<Parameters type="Default">
+	    		<ID>1</ID>
+	    		<NODE_ID>AUDIO_PANEL_Knob_Mic_1</NODE_ID>
+				<ANIM_NAME>AUDIO_PANEL_Knob_Mic_1</ANIM_NAME>
+				<TOOLTIPID>MIC SELECT</TOOLTIPID>
+	    	</Parameters>
+	    	<Component ID="#NODE_ID#" Node="#NODE_ID#">
+		      <UseTemplate Name="ASOBO_GT_Switch_XStates">
+		        <NUM_STATES>6</NUM_STATES>
+		        <ANIM_NAME>#ANIM_NAME#</ANIM_NAME>
+		        <CODE_POS_0>0</CODE_POS_0>
+		        <CODE_POS_1>(&gt;K:COM1_TRANSMIT_SELECT)</CODE_POS_1>
+		        <CODE_POS_2>(&gt;K:COM2_TRANSMIT_SELECT)</CODE_POS_2>
+		        <CODE_POS_3>(&gt;K:COM3_TRANSMIT_SELECT)</CODE_POS_3>
+		        <CODE_POS_4>0</CODE_POS_4>
+		        <CODE_POS_5>0</CODE_POS_5>
+<!-- 		        <STATE1_TEST>
+					(A:COM TRANSMIT:1, bool)       	
+		        </STATE1_TEST> -->
+		      </UseTemplate>	    
+		     </Component>
+		</Template>
+
+</ModelBehaviors>
