@@ -43,7 +43,7 @@ class KN62A extends BaseInstrument {
             this.navIndex = 2;
         }
 
-        this.electricity.setAttribute('state', (this.on) ? 'on' : 'off');
+        this.electricity.setAttribute('state', (this.on && this.isElectricityAvailable()) ? 'on' : 'off');
 
         diffAndSetText(this.distValue, this.toStr(this.getDistance(), "---"));
         diffAndSetText(this.knotsValue, this.toStr(this.getKnots(), "--"));  
