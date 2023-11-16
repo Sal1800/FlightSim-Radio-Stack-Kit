@@ -14,11 +14,15 @@
 		<Include ModelBehaviorFile="Asobo\NAVCOM\NavComSystem.xml"/>	
 	    <Include ModelBehaviorFile="Asobo\Transponder\Transponder.xml"/>
 	    <Include ModelBehaviorFile="Asobo\NAVCOM\ADF.xml"/>	
-		<Include ModelBehaviorFile="Asobo\GPS\AS530.xml"/>	
-
+		<Include ModelBehaviorFile="Asobo\GPS\AS530.xml"/>
+		<Include ModelBehaviorFile="sal1800-AudioPanel\audio_panel_templates_pushbutton.xml"/>
 
 		<Component ID="AVIONICS">
 
+			<!-- Audio Panel -->
+			<UseTemplate Name="Custom_Audio_Panel_Pushbutton_Template">
+			</UseTemplate>
+			
 			<!-- Comnav 1 Radio -->
 			<UseTemplate Name="ASOBO_NAVCOM_Simple_Radio_Template">
 	        	<ID>1</ID>
